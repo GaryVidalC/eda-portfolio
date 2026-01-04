@@ -16,7 +16,7 @@ def clean_data(df, dropna=True):
     
     df_ = df_.drop(columns=["Date", "Time"])
     
-    print(df_.head())
+    # print(df_.head())
     for col in df_.columns:
         if col != "Datetime":
             df_[col] = pd.to_numeric(df_[col], errors='coerce')
